@@ -1,3 +1,8 @@
 #!/usr/bin/env ruby
-require 'bundler/setup'
-system 'bundle exec rspec spec/bug_spec.rb'
+require 'bundler'
+
+Bundler.setup(:default, :group)
+
+Bundler.require(:group)
+
+require 'rake'
